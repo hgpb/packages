@@ -1,0 +1,13 @@
+{
+  "name": "@hgpb/component-library",
+  "version": "0.0.2",
+  "peerDependencies": {
+    "@angular/common": "^8.2.14",
+    "@angular/core": "^8.2.14",
+    "@angular/material": "^8.2.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hgpb/component-library.git"
+  }
+}
