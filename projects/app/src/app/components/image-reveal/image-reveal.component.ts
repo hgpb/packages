@@ -15,7 +15,6 @@ export class ImageRevealComponent implements OnInit {
   ngOnInit() {
     const image1: IImageReveal = {
       path: 'assets/img/image-reveal/auto-3368094.jpg',
-      width: 200,
     };
     const image2: IImageReveal = {
       path: 'assets/img/image-reveal/auto-3370706.jpg',
@@ -23,6 +22,7 @@ export class ImageRevealComponent implements OnInit {
     this.imageContainer = {
       images: [ image1, image2 ],
       height: 700,
+      handle: { width: 5 }
     };
   }
 

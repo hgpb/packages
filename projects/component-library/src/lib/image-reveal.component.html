@@ -1,23 +1,29 @@
 <section #reveal (window:resize)="onResize()">
 
   <div class="container"
-       [style.height.px]="imageRevealInput.height"
-       [style.width.px]="revealWidth"
-       (mousemove)="onHandleMove($event)"
-       (mouseleave)="onResizeFinish()"
-       (mouseup)="onResizeFinish()">
+    [style.height.px]="imageRevealInput.height"
+    [style.width.px]="revealWidth"
+    (touchmove)="onTouchMove($event)"
+    (mousemove)="onMouseMove($event)"
+    (touchend)="onResizeFinish()"
+    (mouseleave)="onResizeFinish()"
+    (touchcancel)="onResizeFinish()"
+    (mouseup)="onResizeFinish()">
 
     <div class="img"
-         [style.width.px]="imageReveal[0].width"
-         [ngStyle]="{ backgroundImage: 'url(' + imageRevealInput.images[0].path + ')' }"></div>
+      [style.width.px]="imageReveal[0].width"
+      [ngStyle]="{ backgroundImage: 'url(' + imageReveal[0].path + ')' }"></div>
 
     <div #handle class="handle"
-         [style.width.px]="handleWidth"
-         (mousedown)="onResizeStart($event)"></div>
+      [style.width.px]="handleWidth"
+      (touchstart)="onTouchStart($event)"
+      (mousedown)="onMouseStart($event)">
+      <span class="button"> ¦¦¦ </span>
+    </div>
 
     <div class="img"
-         [style.width.px]="imageReveal[1].width"
-         [ngStyle]="{ backgroundImage: 'url(' + imageRevealInput.images[1].path + ')' }"></div>
+      [style.width.px]="imageReveal[1].width"
+      [ngStyle]="{ backgroundImage: 'url(' + imageReveal[1].path + ')' }"></div>
 
   </div>
 
