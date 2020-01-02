@@ -1,6 +1,6 @@
 section  {
-  width: 100%;
   user-select: none;
+  margin: auto 0;
 }
 
 .container {
@@ -26,10 +26,10 @@ section  {
   background-color: white;
   padding: 10px;
   border-radius: 20px;
-  left: calc(50% - 17px);
+  left: calc(50% - 15.5px);
   top: calc(50% - 20px);
   font-weight: lighter;
 
-  border: 2px solid #DDD;
+  border: 1px solid #DDD;
   box-shadow: 0px 0px 0px 3px #FFF;
 }

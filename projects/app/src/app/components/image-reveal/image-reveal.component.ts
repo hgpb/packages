@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import {IImageReveal, IImageRevealInput} from '../../../../../component-library/src/lib/image-reveal.component';
+
+import {
+  IImageRevealViewport
+} from '../../../../../component-library/src/lib/components/image-reveal/interfaces/image-reveal-viewport.interface';
+import {
+  IImageRevealInput
+} from '../../../../../component-library/src/lib/components/image-reveal/interfaces/image-reveal-input.interface';
 
 @Component({
   selector: 'app-image-reveal',
@@ -8,21 +14,19 @@ import {IImageReveal, IImageRevealInput} from '../../../../../component-library/
 })
 export class ImageRevealComponent implements OnInit {
 
-  imageContainer: IImageRevealInput;
+  imageRevealInput: IImageRevealInput;
 
   constructor() { }
 
   ngOnInit() {
-    const image1: IImageReveal = {
-      path: 'assets/img/image-reveal/auto-3368094.jpg',
+    const viewport1: IImageRevealViewport = {
+      imagePath: 'assets/img/image-reveal/auto-3368094.jpg',
     };
-    const image2: IImageReveal = {
-      path: 'assets/img/image-reveal/auto-3370706.jpg',
+    const viewport2: IImageRevealViewport = {
+      imagePath: 'assets/img/image-reveal/auto-3370706.jpg',
     };
-    this.imageContainer = {
-      images: [ image1, image2 ],
-      height: 700,
-      handle: { width: 5 }
+    this.imageRevealInput = {
+      viewports: [ viewport1, viewport2 ]
     };
   }
 

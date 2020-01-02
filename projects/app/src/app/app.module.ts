@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from "@angular/router";
 
 import { AppComponent } from './app.component';
-import {ImageRevealModule} from "projects/component-library/src/lib/image-reveal.module";
+import {ImageRevealModule} from "projects/component-library/src/lib/components/image-reveal/image-reveal.module";
 import {ImageRevealComponent} from "projects/app/src/app/components/image-reveal/image-reveal.component";
 import { NavigationComponent } from './components/navigation/navigation.component';
 

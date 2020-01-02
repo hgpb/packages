@@ -1,7 +1,7 @@
 <section #reveal (window:resize)="onResize()">
 
   <div class="container"
-    [style.height.px]="imageRevealInput.height"
+    [style.height.px]="viewportHeight"
     [style.width.px]="revealWidth"
     (touchmove)="onTouchMove($event)"
     (mousemove)="onMouseMove($event)"
@@ -11,8 +11,8 @@
     (mouseup)="onResizeFinish()">
 
     <div class="img"
-      [style.width.px]="imageReveal[0].width"
-      [ngStyle]="{ backgroundImage: 'url(' + imageReveal[0].path + ')' }"></div>
+      [style.width.px]="viewports[0].width"
+      [ngStyle]="{ backgroundImage: 'url(' + viewports[0].imagePath + ')' }"></div>
 
     <div #handle class="handle"
       [style.width.px]="handleWidth"
@@ -22,8 +22,8 @@
     </div>
 
     <div class="img"
-      [style.width.px]="imageReveal[1].width"
-      [ngStyle]="{ backgroundImage: 'url(' + imageReveal[1].path + ')' }"></div>
+      [style.width.px]="viewports[1].width"
+      [ngStyle]="{ backgroundImage: 'url(' + viewports[1].imagePath + ')' }"></div>
 
   </div>
 
