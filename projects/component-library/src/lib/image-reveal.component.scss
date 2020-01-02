@@ -1,0 +1,21 @@
+section  {
+  width: 100%;
+  user-select: none;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+}
+
+.img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.handle {
+  height: 100%;
+  cursor: w-resize;
+  background-color: transparent;
+}
