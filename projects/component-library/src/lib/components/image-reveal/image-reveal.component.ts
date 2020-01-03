@@ -116,8 +116,7 @@ export class ImageRevealComponent implements OnInit {
   }
 
   private getHandleWidth(): number {
-    return Boolean(this.input.handle) && Boolean(this.input.handle.width)
-      ? this.input.handle.width : this.DEFAULT_HANDLE_WIDTH;
+    return Boolean(this.input.handle) && Boolean(this.input.handle.width) ? this.input.handle.width : this.DEFAULT_HANDLE_WIDTH;
   }
 
   private getHeight(): number {

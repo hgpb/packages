@@ -20,7 +20,7 @@ export class ImageRevealComponent implements OnInit {
   };
   private viewport2: IImageRevealViewport = {
     imagePath: 'assets/img/image-reveal/auto-3370706.jpg',
-    // width: 600,
+    // width: 300,
   };
   private updateImageReveal(): void {
     this.input = {
