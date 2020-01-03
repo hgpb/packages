@@ -1,8 +1,8 @@
 <section #reveal (window:resize)="onResize()">
 
-  <div class="container"
-    [style.height.px]="viewportHeight"
-    [style.width.px]="revealWidth"
+  <div class="wrapper"
+    [style.width.px]="irWidth"
+    [style.height.px]="ir.height"
     (touchmove)="onTouchMove($event)"
     (mousemove)="onMouseMove($event)"
     (touchend)="onResizeFinish()"
@@ -10,20 +10,18 @@
     (touchcancel)="onResizeFinish()"
     (mouseup)="onResizeFinish()">
 
-    <div class="img"
-      [style.width.px]="viewports[0].width"
-      [ngStyle]="{ backgroundImage: 'url(' + viewports[0].imagePath + ')' }"></div>
+    <div class="viewport"
+      [style.width.px]="ir.viewports[0].width"
+      [ngStyle]="{ backgroundImage: 'url(' + ir.viewports[0].imagePath + ')' }"></div>
 
-    <div #handle class="handle"
-      [style.width.px]="handleWidth"
+    <div class="handle"
+      [style.width.px]="ir.handle.width"
       (touchstart)="onTouchStart($event)"
-      (mousedown)="onMouseStart($event)">
-      <span class="button"> ¦¦¦ </span>
-    </div>
+      (mousedown)="onMouseStart($event)"><span class="handle-btn"> ¦¦¦ </span></div>
 
-    <div class="img"
-      [style.width.px]="viewports[1].width"
-      [ngStyle]="{ backgroundImage: 'url(' + viewports[1].imagePath + ')' }"></div>
+    <div class="viewport"
+      [style.width.px]="ir.viewports[1].width"
+      [ngStyle]="{ backgroundImage: 'url(' + ir.viewports[1].imagePath + ')' }"></div>
 
   </div>
 

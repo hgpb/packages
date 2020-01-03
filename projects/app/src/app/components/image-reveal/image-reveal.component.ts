@@ -13,12 +13,21 @@ import {
   styleUrls: ['./image-reveal.component.css']
 })
 export class ImageRevealComponent implements OnInit {
-  imageRevealInput: IImageRevealInput;
+  public input: IImageRevealInput;
   private viewport1: IImageRevealViewport = {
     imagePath: 'assets/img/image-reveal/auto-3368094.jpg',
-  }
+    // width: 300,
+  };
   private viewport2: IImageRevealViewport = {
     imagePath: 'assets/img/image-reveal/auto-3370706.jpg',
+    // width: 600,
+  };
+  private updateImageReveal(): void {
+    this.input = {
+      viewports: [ this.viewport1, this.viewport2 ],
+      height: window.innerHeight,
+      // handle: { width: 10 },
+    };
   }
 
   constructor() { }
@@ -29,13 +38,6 @@ export class ImageRevealComponent implements OnInit {
 
   onResize(): void {
     this.updateImageReveal();
-  }
-
-  private updateImageReveal(): void {
-    this.imageRevealInput = {
-      viewports: [ this.viewport1, this.viewport2 ],
-      height: window.innerHeight,
-    };
   }
 
 }
