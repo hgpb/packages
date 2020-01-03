@@ -13,20 +13,28 @@ import {
   styleUrls: ['./image-reveal.component.css']
 })
 export class ImageRevealComponent implements OnInit {
-
   imageRevealInput: IImageRevealInput;
+  private viewport1: IImageRevealViewport = {
+    imagePath: 'assets/img/image-reveal/auto-3368094.jpg',
+  }
+  private viewport2: IImageRevealViewport = {
+    imagePath: 'assets/img/image-reveal/auto-3370706.jpg',
+  }
 
   constructor() { }
 
   ngOnInit() {
-    const viewport1: IImageRevealViewport = {
-      imagePath: 'assets/img/image-reveal/auto-3368094.jpg',
-    };
-    const viewport2: IImageRevealViewport = {
-      imagePath: 'assets/img/image-reveal/auto-3370706.jpg',
-    };
+    this.updateImageReveal();
+  }
+
+  onResize(): void {
+    this.updateImageReveal();
+  }
+
+  private updateImageReveal(): void {
     this.imageRevealInput = {
-      viewports: [ viewport1, viewport2 ]
+      viewports: [ this.viewport1, this.viewport2 ],
+      height: window.innerHeight,
     };
   }
 

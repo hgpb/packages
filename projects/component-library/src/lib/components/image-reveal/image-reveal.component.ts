@@ -72,6 +72,8 @@ export class ImageRevealComponent implements OnInit {
   }
 
   onResize(): void {
+    this.viewportHeight = Boolean(this.imageRevealInput.height) ? this.imageRevealInput.height : this.DEFAULT_VIEWPORT_HEIGHT;
+
     [this.viewports[0].width, this.viewports[1].width] = this.calculateViewportWidths();
     this.revealWidth = this.calculateTotalWidth();
   }

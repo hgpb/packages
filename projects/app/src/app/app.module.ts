@@ -6,16 +6,20 @@ import { AppComponent } from './app.component';
 import {ImageRevealModule} from "projects/component-library/src/lib/components/image-reveal/image-reveal.module";
 import {ImageRevealComponent} from "projects/app/src/app/components/image-reveal/image-reveal.component";
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { HomeComponent } from './components/home/home.component';
 
 const appRoutes: Routes = [
-  { path: 'image-reveal', component: ImageRevealComponent }
+  { path: '', component: HomeComponent },
+  { path: 'image-reveal', component: ImageRevealComponent },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     ImageRevealComponent,
-    NavigationComponent
+    NavigationComponent,
+    HomeComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
