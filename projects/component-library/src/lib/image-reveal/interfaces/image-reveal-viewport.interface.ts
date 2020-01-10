@@ -1,4 +1,4 @@
 export interface IImageRevealViewport {
-  imagePath?: string;
-  width?: number;
+  style?: any;
+  hasParallax?: boolean;
 }

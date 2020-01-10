@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 import {
   IImageRevealViewport
-} from '../../../../../component-library/src/lib/components/image-reveal/interfaces/image-reveal-viewport.interface';
+} from '../../../../../component-library/src/lib/image-reveal/interfaces/image-reveal-viewport.interface';
 import {
   IImageRevealInput
-} from '../../../../../component-library/src/lib/components/image-reveal/interfaces/image-reveal-input.interface';
+} from '../../../../../component-library/src/lib/image-reveal/interfaces/image-reveal-input.interface';
 
 @Component({
   selector: 'app-image-reveal',
@@ -15,12 +15,22 @@ import {
 export class ImageRevealComponent implements OnInit {
   public input: IImageRevealInput;
   private viewport1: IImageRevealViewport = {
-    imagePath: 'assets/img/image-reveal/auto-3368094.jpg',
-    // width: 300,
+    style: {
+      backgroundImage: 'url(assets/img/auto-3368094.jpg)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center right',
+      // width: 300,
+    },
+    hasParallax: true,
   };
   private viewport2: IImageRevealViewport = {
-    imagePath: 'assets/img/image-reveal/auto-3370706.jpg',
-    // width: 300,
+    style: {
+      backgroundImage: 'url(assets/img/auto-3370706.jpg)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center right',
+      // width: 300,
+    },
+    hasParallax: true,
   };
   private updateImageReveal(): void {
     this.input = {

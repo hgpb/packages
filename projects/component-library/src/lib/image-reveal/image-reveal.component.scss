@@ -7,7 +7,8 @@ section  {
     display: flex;
 
     .viewport {
-      background-size: cover;
+      height: 100%;
+      backgroundSize: cover;
       background-position: center;
       background-repeat: no-repeat;
     }
