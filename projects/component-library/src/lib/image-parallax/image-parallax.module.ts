@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ImageParallaxLayerDirective } from './image-parallax.directive';
+import { ImageParallaxDirective } from './image-parallax.directive';
 
 @NgModule({
   declarations: [
-    ImageParallaxLayerDirective,
+    ImageParallaxDirective,
   ],
   imports: [
     CommonModule,
   ],
   exports: [
-    ImageParallaxLayerDirective,
+    ImageParallaxDirective,
   ]
 })
 export class ImageParallaxModule { }

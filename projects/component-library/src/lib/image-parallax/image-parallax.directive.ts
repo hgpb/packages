@@ -8,7 +8,7 @@ enum DIMENSION {
 }
 
 @Directive({selector: '[compParallaxLayer]'})
-export class ImageParallaxLayerDirective implements OnInit, OnDestroy {
+export class ImageParallaxDirective implements OnInit, OnDestroy {
   private bckgrdImg: HTMLImageElement;
   private bckgrdImgOrig: HTMLImageElement;
   private bckgrdPositionX: string;
@@ -136,6 +136,7 @@ export class ImageParallaxLayerDirective implements OnInit, OnDestroy {
 
   private calculatePosition(x: number, y: number): void {
     if (this.isViewportWidthGreaterThanImg() && this.isViewportHeightGreaterThanImg()) {
+      console.log('moo', this.el.nativeElement.offsetWidth, this.bckgrdImg.width);
       this.el.nativeElement.style.backgroundPositionX = this.bckgrdPositionX;
       this.el.nativeElement.style.backgroundPositionY = this.bckgrdPositionY;
     } else if (this.isViewportWidthGreaterThanImg()) {
@@ -160,6 +161,8 @@ export class ImageParallaxLayerDirective implements OnInit, OnDestroy {
         this.el.nativeElement.style.backgroundPositionY = this.bckgrdPositionY;
       }
     }
+
+
   }
 
   private isViewportWidthGreaterThanImg(): boolean {

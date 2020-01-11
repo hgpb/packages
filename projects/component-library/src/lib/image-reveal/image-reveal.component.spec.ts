@@ -10,13 +10,17 @@ describe('ImageRevealComponent', () => {
   const input: IImageRevealInput = {
     viewports: [
       {
-        imagePath: 'assets/img/image-reveal/auto-3368094.jpg',
-        width: 300,
+        style: {
+          backgroundImage: 'url(assets/img/auto-3368094.jpg)',
+          width: 300,
+        },
       },
       {
-        imagePath: 'assets/img/image-reveal/auto-3370706.jpg',
-        width: 300,
-      }
+        style: {
+          backgroundImage: 'url(assets/img/auto-3370706.jpg)',
+          width: 300,
+        },
+      },
     ],
     height: 500,
     handle: { width: 3 },
@@ -45,20 +49,20 @@ describe('ImageRevealComponent', () => {
       expect(component.ir.height).toBe(500);
     });
 
-    it('should set left viewport image path correctly', () => {
-      expect(component.ir.viewports[0].imagePath).toBe('assets/img/image-reveal/auto-3368094.jpg');
-    });
-
-    it('should set right viewport image path correctly', () => {
-      expect(component.ir.viewports[1].imagePath).toBe('assets/img/image-reveal/auto-3370706.jpg');
-    });
-
     it('should set left viewport width correctly', () => {
-      expect(component.ir.viewports[0].width).toBe(298.5);
+      expect(component.ir.viewports[0].style.width).toBe(298.5);
     });
 
     it('should set right viewport width correctly', () => {
-      expect(component.ir.viewports[1].width).toBe(298.5);
+      expect(component.ir.viewports[1].style.width).toBe(298.5);
+    });
+
+    it('should set left viewport image path correctly', () => {
+      expect(component.ir.viewports[0].style.backgroundImage).toEqual('url(assets/img/auto-3368094.jpg)');
+    });
+
+    it('should set right viewport image path correctly', () => {
+      expect(component.ir.viewports[1].style.backgroundImage).toEqual('url(assets/img/auto-3370706.jpg)');
     });
 
     it('should set handle width correctly', () => {

@@ -1,17 +1,14 @@
 {
   "name": "@hgpb/component-library",
-  "version": "0.0.12",
+  "version": "0.0.15",
   "peerDependencies": {
     "@angular/common": "^8.2.14",
     "@angular/core": "^8.2.14",
-    "@angular/material": "^8.2.3"
+    "@angular/material": "^8.2.3",
+    "resize-observer-polyfill": "^1.5.1"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/hgpb/component-library.git"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "resize-observer-polyfill": "^1.5.1"
   }
 }
