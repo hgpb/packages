@@ -2,7 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
-This library contains hand crafted components I felt like building for demo purposes.
+The `app` demonstarates the use of the `component-library`. 
+
+Thie `component-library` contains hand crafted components!
 
 ## Development server
 
