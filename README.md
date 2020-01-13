@@ -2,9 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
-## Install library/package example
-
-`npm install @hgpb/component-library`
+See `./projects` folder. 
 
 ## Development server
 
