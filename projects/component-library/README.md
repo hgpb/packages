@@ -4,9 +4,9 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
 
 Contains hand crafted components.
 
-## Install this library/package
+## Install package
 
-`npm install @hgpb/component-library`.
+You can install this project/package/library by running the following:  `npm install @hgpb/component-library`.
 
 ## Code scaffolding
 
