@@ -2,6 +2,8 @@
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.14.
 
+Contains hand crafted components.
+
 ## Code scaffolding
 
 Run `ng generate component component-name --project ComponentLibrary` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ComponentLibrary`.
