@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
-This app is for component demonstration. Once you add a new component you will add it here also so you can demonstrate its usage.
+This library contains hand crafted components I felt like building for demo purposes.
 
 ## Development server
 
