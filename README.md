@@ -4,7 +4,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 The `app` demonstarates the use of the `component-library`. 
 
-Thie `component-library` contains hand crafted components!
+The `component-library` contains hand crafted components.
+
+## Install library
+
+`npm install @hgpb/component-library`
 
 ## Development server
 
