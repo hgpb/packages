@@ -4,6 +4,10 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
 
 Contains hand crafted components.
 
+## Install package
+
+You can install this project/package/library by running the following:  `npm install @hgpb/component-library`.
+
 ## Code scaffolding
 
 Run `ng generate component component-name --project ComponentLibrary` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ComponentLibrary`.
