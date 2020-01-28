@@ -99,33 +99,33 @@ export class ImageParallaxDirective implements OnInit, OnDestroy {
         }
       }
     } else {
-      const bckgrdSizeValue = ['', ''];
-      [bckgrdSizeValue[DIMENSION.WIDTH], bckgrdSizeValue[DIMENSION.HEIGHT]] = this.el.nativeElement.style.backgroundSize.split(' ');
-      const parsedWidth = parseFloat(bckgrdSizeValue[DIMENSION.WIDTH]);
-      const parsedHeight = parseFloat(bckgrdSizeValue[DIMENSION.HEIGHT]);
-      if (bckgrdSizeValue[DIMENSION.WIDTH] && bckgrdSizeValue[DIMENSION.HEIGHT]) {
+      const bckgrdSizeVal = ['', ''];
+      [bckgrdSizeVal[DIMENSION.WIDTH], bckgrdSizeVal[DIMENSION.HEIGHT]] = this.el.nativeElement.style.backgroundSize.split(' ');
+      const parsedWidth = parseFloat(bckgrdSizeVal[DIMENSION.WIDTH]);
+      const parsedHeight = parseFloat(bckgrdSizeVal[DIMENSION.HEIGHT]);
+      if (bckgrdSizeVal[DIMENSION.WIDTH] && bckgrdSizeVal[DIMENSION.HEIGHT]) {
         // px
-        if (bckgrdSizeValue[DIMENSION.WIDTH].indexOf('px') > 0) {
+        if (bckgrdSizeVal[DIMENSION.WIDTH].indexOf('px') > 0) {
           this.bckgrdImg.width = parsedWidth;
         }
-        if (bckgrdSizeValue[DIMENSION.HEIGHT].indexOf('px') > 0) {
+        if (bckgrdSizeVal[DIMENSION.HEIGHT].indexOf('px') > 0) {
           this.bckgrdImg.height = parsedHeight;
         }
         // %
-        if (bckgrdSizeValue[DIMENSION.WIDTH].indexOf('%') > 0) {
+        if (bckgrdSizeVal[DIMENSION.WIDTH].indexOf('%') > 0) {
           this.bckgrdImg.width = this.el.nativeElement.offsetWidth * parsedWidth / 100;
         }
-        if (bckgrdSizeValue[DIMENSION.HEIGHT].indexOf('%') > 0) {
+        if (bckgrdSizeVal[DIMENSION.HEIGHT].indexOf('%') > 0) {
           this.bckgrdImg.height = this.el.nativeElement.offsetHeight * parsedHeight / 100;
         }
-      } else if (bckgrdSizeValue[DIMENSION.WIDTH]) {
+      } else if (bckgrdSizeVal[DIMENSION.WIDTH]) {
         // px
-        if (bckgrdSizeValue[DIMENSION.WIDTH].indexOf('px') > 0) {
+        if (bckgrdSizeVal[DIMENSION.WIDTH].indexOf('px') > 0) {
           this.bckgrdImg.width = parsedWidth;
           this.bckgrdImg.height = this.bckgrdImgOrig.height / this.bckgrdImgOrig.width * parsedWidth;
         }
         // %
-        if (bckgrdSizeValue[DIMENSION.WIDTH].indexOf('%') > 0) {
+        if (bckgrdSizeVal[DIMENSION.WIDTH].indexOf('%') > 0) {
           const percent = parsedWidth;
           this.bckgrdImg.width = this.el.nativeElement.offsetWidth * percent;
           this.bckgrdImg.height = this.bckgrdImgOrig.height / this.bckgrdImgOrig.width * this.el.nativeElement.offsetWidth * percent;
@@ -136,7 +136,6 @@ export class ImageParallaxDirective implements OnInit, OnDestroy {
 
   private calculatePosition(x: number, y: number): void {
     if (this.isViewportWidthGreaterThanImg() && this.isViewportHeightGreaterThanImg()) {
-      console.log('moo', this.el.nativeElement.offsetWidth, this.bckgrdImg.width);
       this.el.nativeElement.style.backgroundPositionX = this.bckgrdPositionX;
       this.el.nativeElement.style.backgroundPositionY = this.bckgrdPositionY;
     } else if (this.isViewportWidthGreaterThanImg()) {
@@ -161,8 +160,6 @@ export class ImageParallaxDirective implements OnInit, OnDestroy {
         this.el.nativeElement.style.backgroundPositionY = this.bckgrdPositionY;
       }
     }
-
-
   }
 
   private isViewportWidthGreaterThanImg(): boolean {
